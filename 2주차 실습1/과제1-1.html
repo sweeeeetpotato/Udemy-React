@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과제1</title>
+  <style>
+    body {
+      margin: initial;
+      padding: initial;
+      text-align: center;
+    }
+    .name {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: blue;
+    }
+    .img {
+      width: 200px;
+    }
+    .bingo-board {
+      border: 1px solid black;
+      display: inline-block;
+    }
+    .bingo-board td {
+      border: 1px solid black;
+      width: 150px;
+      height: 150px;
+    }
+    .bingo-board td:hover {
+      background-color: lightpink;
+      color: red;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>안녕하세요!</h1>
+  <h3>제 이름은 <span class="name">이세영</span>입니다.</h3>
+  <img src="https://pbs.twimg.com/media/E7YiX1KVIAAboQD.jpg" alt="감자도리이미지" class="img">
+  <p>그냥 소개하면 재미없을거 같아서 빙고판을 준비했어요</p>
+  <p>빙고판을 하나씩 클릭해보세요!</p>
+
+  <table class="bingo-board">
+    <tbody>
+      <tr>
+        <td onclick="alert('롤 하는거 좋아합니다! 칼바람 최고!')">취미</td>
+        <td onclick="alert('ISTP!! 근데 사람들이 안믿어요...ㅎㅎ')">MBTI</td>
+        <td onclick="alert('좀 뜬금없죠?! 제가 정말 좋아하는 캐릭터입니다. 저의 아이디나 메일주소, 프로필 사진은 거의 다 감자도리와 관련이 있답니다!')">감자도리</td>
+      </tr>
+      <tr>
+        <td onclick="alert('경기도 부천에서 왔습니당!')">거주지역</td>
+        <td onclick="alert('슬프게도 올해 앞자리가 바꼈어요....짐작되시죠...?')">나이</td>
+        <td onclick="alert('sweet_potato13@naver.com (TMI : 제가 좋아하는 감자도리의 꿈이 고구마가 되는거라 아이디가 저렇습니당)')">이메일</td>
+      </tr>
+      <tr>
+        <td onclick="alert('단정한 옷차림과 헤어스타일, 그리고 예쁜 손!!!')">이상형</td>
+        <td onclick="alert('전자공학부 전공했어요! 전공선택 수업에서 코딩수업을 넘 좋아했었어요')">전공</td>
+        <td onclick="alert('노는거 매우 좋아해요!! 장난도 잘 받아줍니다! 장난도 잘 치구요ㅎㅎ 역치가 높은 편이지만 선을 넘으면 바로 연을 끊어버리는 성격이랍니다...!!')">성격</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

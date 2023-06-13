@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>과제2</title>
+    <style>
+      body {
+        margin: initial;
+        padding: initial;
+        text-align: center;
+      }
+      section {
+        margin: 50px 0 100px 0;
+      }
+      ul {
+        display: inline-block;
+        padding-left: 20px;
+      }
+      li {
+        text-align: left;
+        margin: 10px 0;
+      }
+      .analyze-table {
+        border: 1px solid black;
+        width: 60%;
+        margin: 0 auto;
+        table-layout: fixed;
+      }
+      .analyze-table thead {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+      .analyze-table td {
+        border: 1px solid black;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>웅진씽크빅/웅진 IT 홈페이지 HTML 태그 분석</h2>
+        <table class="analyze-table">
+          <thead>
+            <tr>
+              <td>웅진플레이</td>
+              <td>웅진 IT</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    inline 속성을 가진 a태그 안에 block 속성의 p태그가 들어가
+                    있습니다. 이는 웹 접근성에 위배됩니다.
+                  </li>
+                  <li>
+                    section, nav와 같은 시맨틱 태그가 아닌 div 태그로 이루어진
+                    형태가 많습니다.
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>너무 많은 주석이 보입니다.</li>
+                  <li>
+                    main에 footer가 2개 입니다. 하나는 더이상 사용하지않는지
+                    display: none으로 되어있는데 왜 안지운건지 모르겠습니다.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>시맨틱 태그를 사용해야하는 이유</h2>
+        <ul>
+          <li>
+            <strong>코드의 가독성과 유지보수성 향상</strong>
+            <p>
+              적절한 태그를 사용함으로써 영역 구분이 확실하게 되고, 코드
+              수정시에도 필요한 위치를 빠르게 찾기 쉽습니다.
+            </p>
+          </li>
+          <li>
+            <strong>웹 접근성</strong>
+            <p>
+              적절한 태그를 사용해야만 시각장애인들이 스크린리더를 사용했을시
+              원하는 메뉴를 찾을 수 있습니다.
+            </p>
+          </li>
+          <li>
+            <strong>SEO(검색엔진 최적화)</strong>
+            <p>
+              검색엔진은 웹 페이지의 태그를 분석하기 때문에 적절한 태그를 사용한
+              웹페이지가 상위 노출되는데에 유리합니다.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
