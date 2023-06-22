@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="style.css " />
   </head>
   <body>
-    <header>
+    <header class="header">
+      <div id="date"></div>
       <h1 class="txt-hide">나만의 페이지</h1>
+      <div id="weather"></div>
     </header>
     <main id="main" onclick="changeImagesHandler(event)">
-      <div id="date"></div>
       <div id="clock"></div>
       <p id="greetings"></p>
       <section id="toDoList-wrapper">
         <h3>Today To do List</h3>
-        <input type="text" placeholder="내용을 입력하세요" id="list-input" onkeydown="handleOnKeyDown(event)" />
+        <input type="text" placeholder="오늘 할 일을 입력하세요." id="list-input" onkeydown="handleOnKeyDown(event)" />
         <ul id="toDoList"></ul>
       </section>
     </main>
