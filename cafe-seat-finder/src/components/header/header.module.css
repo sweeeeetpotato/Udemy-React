@@ -1,0 +1,10 @@
+.home_header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
