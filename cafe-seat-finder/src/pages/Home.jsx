@@ -21,10 +21,10 @@ export default function Home() {
       {showLandingPage ? (
         <Landing />
       ) : (
-        <section className="layout">
+        <>
           <HomeHeader />
           <CafeList />
-        </section>
+        </>
       )}
     </>
   );

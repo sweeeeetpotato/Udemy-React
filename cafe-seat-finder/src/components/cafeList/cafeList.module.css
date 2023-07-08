@@ -1,5 +1,5 @@
 .main {
-  margin-top: 20px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -41,7 +41,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.img_btn {
+.subscribe_btn {
   position: absolute;
   top: 10px;
   right: 10px;
