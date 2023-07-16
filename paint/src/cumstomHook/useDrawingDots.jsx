@@ -8,7 +8,7 @@ export const useDrawingDots = () => {
   const dots = useSelector((state) => state.drawing.dots);
   const [position, setPosition] = useState({});
 
-  const DotMouseEvents = (event) => {
+  const dotMouseEvents = (event) => {
     const { offsetX, offsetY } = event.nativeEvent;
     const dot = {
       x: offsetX,
@@ -38,5 +38,5 @@ export const useDrawingDots = () => {
     });
   };
 
-  return { DotMouseEvents, dotDraw };
+  return { dotMouseEvents, dotDraw };
 };

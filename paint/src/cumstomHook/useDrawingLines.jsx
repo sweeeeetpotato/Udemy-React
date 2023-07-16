@@ -8,8 +8,8 @@ export const useDrawingLines = () => {
   const lines = useSelector((state) => state.drawing.lines);
   const [drawing, setDrawing] = useState(false);
   const [linesDrawn, setLinesDrawn] = useState([]);
-
-  const LineMouseEvents = (event) => {
+  
+  const lineMouseEvents = (event) => {
     const { offsetX, offsetY } = event.nativeEvent;
     const point = {
       x: offsetX,
@@ -51,5 +51,5 @@ export const useDrawingLines = () => {
     linesDrawn.forEach((line) => drawLine(line));
   };
 
-  return { LineMouseEvents, lineDraw };
+  return { lineMouseEvents, lineDraw };
 };

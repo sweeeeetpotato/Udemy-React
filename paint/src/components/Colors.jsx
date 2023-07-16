@@ -1,28 +1,29 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { currentColor } from "redux_toolkit/drawingSlice";
 
 export default function Colors() {
   const dispatch = useDispatch();
-  const [selectedColor, setSelectedColor] = useState("black");
-
-  const btnCommonStyle = "w-6 h-6 outline outline-offset-2";
+  const selectedColor = useSelector((state) => state.drawing.currentColor);
+  const btnCommonStyle = "w-6 h-6 outline outline-offset-2 ";
 
   const handleColor = (color) => {
-    setSelectedColor(color);
     dispatch(currentColor(color));
   };
 
   const btnStyle = (color) => {
     let selectedBtnStyle = btnCommonStyle;
-    selectedBtnStyle += selectedColor === color ? " outline-2" : " outline-1";
+    selectedBtnStyle +=
+    selectedColor === color
+        ? "outline-2 outline-black"
+        : "outline-1 outline-gray-500";
 
     return selectedBtnStyle;
   };
 
   return (
     <>
-      <div className="grid grid-cols-5 grid-rows-2 gap-2.5">
+      <div className="grid grid-cols-5 grid-rows-2 gap-3">
         <button
           onClick={() => handleColor("black")}
           className={`bg-black ${btnStyle("black")}`}

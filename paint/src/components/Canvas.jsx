@@ -2,16 +2,23 @@ import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { useDrawingDots } from "cumstomHook/useDrawingDots";
 import { useDrawingLines } from "cumstomHook/useDrawingLines";
+import { useDrawingPencil } from "cumstomHook/useDrawingPencil";
 
 export default function Canvas() {
   const drawingMode = useSelector((state) => state.drawing.drawingMode);
   const canvasRef = useRef(null);
-  const { DotMouseEvents, dotDraw } = useDrawingDots();
-  const { LineMouseEvents, lineDraw } = useDrawingLines();
+  const { dotMouseEvents, dotDraw } = useDrawingDots();
+  const { lineMouseEvents, lineDraw } = useDrawingLines();
+  const { pencilMouseEvents, pencilDraw } = useDrawingPencil();
+
+  const drawingFunctions = {
+    dot: dotMouseEvents,
+    line: lineMouseEvents,
+    pencil: pencilMouseEvents,
+  };
 
   const handleMouseEvents = (event) => {
-    drawingMode === "dot" && DotMouseEvents(event);
-    drawingMode === "line" && LineMouseEvents(event);
+    drawingFunctions[drawingMode](event);
   };
 
   useEffect(() => {
@@ -20,7 +27,9 @@ export default function Canvas() {
 
     dotDraw(context);
     lineDraw(context);
-  }, [drawingMode, dotDraw, lineDraw]);
+    pencilDraw(context);
+  }, [drawingMode, dotDraw, lineDraw, pencilDraw]);
+
 
   return (
     <canvas
