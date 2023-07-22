@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import lectureReducer from "./slice/lectureInfoSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    lecture: lectureReducer,
+  },
   devTools: process.env.NODE_ENV !== "production",
 });
 
