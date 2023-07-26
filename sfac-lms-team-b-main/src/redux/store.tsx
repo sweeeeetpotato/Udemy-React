@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import lectureReducer from "./slice/lectureInfoSlice";
+import classroomModalReducer from "./slice/classroomModalSlice";
 
 export const store = configureStore({
   reducer: {
-    lecture: lectureReducer,
+    classroomModal: classroomModalReducer,
   },
   devTools: process.env.NODE_ENV !== "production",
 });
